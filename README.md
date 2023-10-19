@@ -1,3 +1,5 @@
+![](https://miro.medium.com/v2/resize:fit:828/format:webp/1*ahpxPO0jLGb9EWrY2qQPhg.jpeg)
+
 # Sistema de Banco em JavaScript
 
 Este é um sistema de banco simples implementado em JavaScript. Ele permite realizar operações bancárias básicas, como criar contas, depositar dinheiro, sacar dinheiro e verificar o saldo, extratos e transferências.
@@ -21,15 +23,20 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
    ```bash
    git clone https://github.com/jonatanfragoso/Sistema-Bancario-em-JavaScript.git
    ```
-
-2. **Utilize o Insomnia para fazer as requisições HTTP**
+2. **Instale as dependências do node:**
+   
+   ```
+   npm install
+   ```
+   
+3. **Utilize o Insomnia para fazer as requisições HTTP**
    
    ```
    https://insomnia.rest/download
    ```
  
 
-3. **End Points:**
+4. **End Points:**
    
    ```
    - (GET) http://localhost:8000/contas
@@ -42,7 +49,7 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
    - (GET) http://localhost:8000/contas/extrato?numero_conta=1&senha=123
    ```
 
-4. **Criar Conta Bancária:**
+5. **Criar Conta Bancária:**
 - Utilizando o método POST, acesse o end point "http://localhost:8000/contas" e no corpo da requisição passe um JSON. Exemplo:
   
    ```
@@ -56,14 +63,14 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
       }
    ```
 
-5. **Listar todas as contas:**
+6. **Listar todas as contas:**
 - Utilizando o método GET, acesse o end point "http://localhost:8000/contas" e acrescente um parâmetro de consulta na URL com a senha do banco correta. Exemplo:
   
    ```
    http://localhost:8000/contas?senha_banco=Cubos123Bank
    ```
     
-6. **Atualizar uma conta:**
+7. **Atualizar uma conta:**
 - Utilizando o método PUT, acesse o end point "http://localhost:8000/contas" e acrescente parâmetros de rota na URL com o id do usuário seguido de "/usuario", e, passe no corpo da requisição m JSON com o objeto completo com os atributos que deseja trocar. Exemplo:
   
    ```
@@ -83,14 +90,14 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
       }
    ```
 
-7. **Deletar uma conta:**
+8. **Deletar uma conta:**
 - Para deletar uma conta utilizand o método DELETE, acesse o end point "http://localhost:8000/contas" e acrescente à url o parâmetro de rota com o ID da conta. Exemplo:
   
    ```
    http://localhost:8000/contas/2
    ```
 
-8. **Depositar em uma conta:**
+9. **Depositar em uma conta:**
 - Para depositar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/depositar" e passe como corpo da requisição um objeto contendo o número da conta e o valor. Exemplo:
 
    ```
@@ -100,7 +107,7 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
       }
    ```
 
-9. **Sacar valor de um conta:**
+10. **Sacar valor de um conta:**
 - Para sacar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/sacar" e passe como corpo da requisição um objeto contendo o número da conta, valor e senha da conta bancária. Exemplo:
   
    ```
@@ -111,7 +118,7 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
       }
    ```
 
-10. **Tranferência entre contas:**
+11. **Tranferência entre contas:**
 - Para transferir um valor em uma conta para outra, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/transferir" e passe como corpo da requisição um objeto contendo o número da conta de origem, número da conta destino, o valor e a senha da conta bancária de origem. Exemplo:
   
    ```
@@ -123,7 +130,7 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
       }
    ```
 
-11. **Extrato bancário:**
+12. **Extrato bancário:**
 - Para imprimir o extrato de uma conta, utilize o método GET, acesse o end point "http://localhost:8000/contas/extrato" e passe como parâmetros de consulta o número da conta e senha. Exemplo:
   
    ```
