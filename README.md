@@ -91,7 +91,7 @@ http://localhost:8000/contas/2
 ```
 
 10. **Depositar em uma conta:**
-- Para depositar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/depositar" e passe como corpo da requisição um JSON contendo o número da conta e o valor. Exemplo:
+- Para depositar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/depositar" e passe como corpo da requisição um objeto contendo o número da conta e o valor. Exemplo:
   
 ```
   {
@@ -101,18 +101,18 @@ http://localhost:8000/contas/2
 ```
 
 12. **Sacar valor de um conta:**
-- Para sacar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/sacar" e passe como corpo da requisição um JSON contendo o número da conta, valor e senha da conta bancária. Exemplo:
+- Para sacar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/sacar" e passe como corpo da requisição um objeto contendo o número da conta, valor e senha da conta bancária. Exemplo:
   
 ```
   {
-  	"numero_conta": "2",
-  	"valor": 30,
+  	"numero_conta": "1",
+  	"valor": 1900
    "senha": "123"
   }
 ```
 
 14. **Tranferência entre contas:**
-- Para transferir um valor em uma conta para outra, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/transferir" e passe como corpo da requisição um JSON contendo o número da conta de origem, número da conta destino, o valor e a senha da conta bancária de origem. Exemplo:
+- Para transferir um valor em uma conta para outra, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/transferir" e passe como corpo da requisição um objeto contendo o número da conta de origem, número da conta destino, o valor e a senha da conta bancária de origem. Exemplo:
   
 ```
   {
