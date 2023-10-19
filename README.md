@@ -23,12 +23,14 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
    ```
 
 2. **Utilize o Insomnia para fazer as requisições HTTP**
+   
    ```
    https://insomnia.rest/download
    ```
  
 
 4. **End Points:**
+   
    ```
    - (GET) http://localhost:8000/contas
    - (POST) http://localhost:8000/contas
@@ -40,9 +42,9 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
    - (GET) http://localhost:8000/contas/extrato?numero_conta=1&senha=123
    ```
 
-5. **Criar Conta Bancária:**
+6. **Criar Conta Bancária:**
 - Utilizando o método POST, acesse o end point "http://localhost:8000/contas" e no corpo da requisição passe um JSON. Exemplo:
-- 
+  
    ```
    {
     "nome": "Jonatan",
@@ -56,16 +58,20 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
 
 6. **Listar todas as contas:**
 - Utilizando o método GET, acesse o end point "http://localhost:8000/contas" e acrescente um parâmetro de consulta na URL com a senha do banco correta. Exemplo:
+  
 ```
   - http://localhost:8000/contas?senha_banco=Cubos123Bank
 ```
     
 6. **Atualizar uma conta:**
 - Utilizando o método PUT, acesse o end point "http://localhost:8000/contas" e acrescente parâmetros de rota na URL com o id do usuário seguido de "/usuario", e, passe no corpo da requisição m JSON com o objeto completo com os atributos que deseja trocar. Exemplo:
+  
 ```
     - http://localhost:8000/contas/3/usuario
 ```
+
   JSON do objeto:
+  
   ```
     {
     "nome": "Ciclano",
@@ -79,12 +85,14 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
 
 8. **Deletar uma conta:**
 - Para deletar uma conta utilizand o método DELETE, acesse o end point "http://localhost:8000/contas" e acrescente à url o parâmetro de rota com o ID da conta. Exemplo:
+  
 ```
     - http://localhost:8000/contas/2
 ```
 
 10. **Depositar em uma conta:**
 - Para depositar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/depositar" e passe como corpo da requisição um JSON contendo o número da conta e o valor. Exemplo:
+  
 ```
   {
   	"numero_conta": "1",
@@ -94,6 +102,7 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
 
 12. **Sacar valor de um conta:**
 - Para sacar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/sacar" e passe como corpo da requisição um JSON contendo o número da conta, valor e senha da conta bancária. Exemplo:
+  
 ```
   {
   	"numero_conta": "2",
@@ -104,6 +113,7 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
 
 14. **Tranferência entre contas:**
 - Para transferir um valor em uma conta para outra, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/transferir" e passe como corpo da requisição um JSON contendo o número da conta de origem, número da conta destino, o valor e a senha da conta bancária de origem. Exemplo:
+  
 ```
   {
   	"numero_conta_origem": "1",
@@ -115,6 +125,7 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
 
 16. **Extrato bancário:**
 - Para imprimir o extrato de uma conta, utilize o método GET, acesse o end point "http://localhost:8000/contas/extrato" e passe como parâmetros de consulta o número da conta e senha. Exemplo:
+  
 ```
     - http://localhost:8000/contas/extrato?numero_conta=1&senha=123
 ```
