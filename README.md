@@ -1,4 +1,4 @@
-![](https://miro.medium.com/v2/resize:fit:828/format:webp/1*ahpxPO0jLGb9EWrY2qQPhg.jpeg)
+![](https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png)
 
 # Sistema de Banco em JavaScript
 
