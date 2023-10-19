@@ -45,89 +45,89 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
 6. **Criar Conta Bancária:**
 - Utilizando o método POST, acesse o end point "http://localhost:8000/contas" e no corpo da requisição passe um JSON. Exemplo:
   
-```
-   {
-       "nome": "Jonatan",
-       "cpf": "012345678910",
-       "data_nascimento": "2021-03-15",
-       "telefone": "68999998888",
-       "email": "jonatan@email.com",
-       "senha": "123"
-   }
-```
+   ```
+      {
+          "nome": "Jonatan",
+          "cpf": "012345678910",
+          "data_nascimento": "2021-03-15",
+          "telefone": "68999998888",
+          "email": "jonatan@email.com",
+          "senha": "123"
+      }
+   ```
 
 6. **Listar todas as contas:**
 - Utilizando o método GET, acesse o end point "http://localhost:8000/contas" e acrescente um parâmetro de consulta na URL com a senha do banco correta. Exemplo:
   
-```
-http://localhost:8000/contas?senha_banco=Cubos123Bank
-```
+   ```
+   http://localhost:8000/contas?senha_banco=Cubos123Bank
+   ```
     
 6. **Atualizar uma conta:**
 - Utilizando o método PUT, acesse o end point "http://localhost:8000/contas" e acrescente parâmetros de rota na URL com o id do usuário seguido de "/usuario", e, passe no corpo da requisição m JSON com o objeto completo com os atributos que deseja trocar. Exemplo:
   
-```
-http://localhost:8000/contas/3/usuario
-```
+   ```
+   http://localhost:8000/contas/3/usuario
+   ```
 
   JSON do objeto:
   
-```
-   {
-      "nome": "Ciclano",
-      "cpf": "16452224200",
-      "data_nascimento": "2021-03-15",
-      "telefone": "68999100811",
-      "email": "ciclano@gmail.com",
-      "senha": "123"
-   }
-```
+   ```
+      {
+         "nome": "Ciclano",
+         "cpf": "16452224200",
+         "data_nascimento": "2021-03-15",
+         "telefone": "68999100811",
+         "email": "ciclano@gmail.com",
+         "senha": "123"
+      }
+   ```
 
 8. **Deletar uma conta:**
 - Para deletar uma conta utilizand o método DELETE, acesse o end point "http://localhost:8000/contas" e acrescente à url o parâmetro de rota com o ID da conta. Exemplo:
   
-```
-http://localhost:8000/contas/2
-```
+   ```
+   http://localhost:8000/contas/2
+   ```
 
 10. **Depositar em uma conta:**
 - Para depositar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/depositar" e passe como corpo da requisição um objeto contendo o número da conta e o valor. Exemplo:
 
-```
-   {
-      "numero_conta": "1",
-      "valor": 1900
-   }
-```
+   ```
+      {
+         "numero_conta": "1",
+         "valor": 1900
+      }
+   ```
 
 12. **Sacar valor de um conta:**
 - Para sacar um valor em uma conta existente, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/sacar" e passe como corpo da requisição um objeto contendo o número da conta, valor e senha da conta bancária. Exemplo:
   
-```
-   {
-      "numero_conta": "1",
-      "valor": 1900,
-      "senha": "123"
-   }
-```
+   ```
+      {
+         "numero_conta": "1",
+         "valor": 1900,
+         "senha": "123"
+      }
+   ```
 
 14. **Tranferência entre contas:**
 - Para transferir um valor em uma conta para outra, utilize o método POST, acesse o end point "http://localhost:8000/transacoes/transferir" e passe como corpo da requisição um objeto contendo o número da conta de origem, número da conta destino, o valor e a senha da conta bancária de origem. Exemplo:
   
-```
-   {
-      "numero_conta_origem": "1",
-      "numero_conta_destino": "2",
-      "valor": 10,
-      "senha": "123"
-   }
-```
+   ```
+      {
+         "numero_conta_origem": "1",
+         "numero_conta_destino": "2",
+         "valor": 10,
+         "senha": "123"
+      }
+   ```
 
 16. **Extrato bancário:**
 - Para imprimir o extrato de uma conta, utilize o método GET, acesse o end point "http://localhost:8000/contas/extrato" e passe como parâmetros de consulta o número da conta e senha. Exemplo:
   
-```
-http://localhost:8000/contas/extrato?numero_conta=1&senha=123
-```
+   ```
+   http://localhost:8000/contas/extrato?numero_conta=1&senha=123
+   ```
 
 
