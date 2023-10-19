@@ -23,9 +23,8 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
    ```
 
 2. **Utilize o Insomnia para fazer as requisições HTTP**
-3. ```
    [https://insomnia.rest/download]
-   ```
+ 
 
 4. **End Points:**
    ```
