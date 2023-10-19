@@ -41,7 +41,8 @@ Este é um sistema de banco simples implementado em JavaScript. Ele permite real
    ```
 
 5. **Criar Conta Bancária:**
-- Utilizando o método POST, acesse o end point "http://localhost:8000/contas" e no corpo da requisição passe um JSON como este:
+- Utilizando o método POST, acesse o end point "http://localhost:8000/contas" e no corpo da requisição passe um JSON. Exemplo:
+- 
    ```
    {
     "nome": "Jonatan",
